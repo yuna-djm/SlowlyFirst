@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Slowly First</title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: #000000; /* 다크한 배경 */
+        color: #000000;
+      }
+      #sketch-display {
+        width: 720px;
+        height: 480px;
+        position: relative;
+        overflow: hidden;
+        transition: width 0.3s, height 0.3s;
+        /* border-radius: 20px; */
+      }
+      #sketch-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
+      h1 {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>hello</h1> -->
+    <div id="sketch-display">
+      <iframe id="sketch-iframe"></iframe>
+    </div>
+    <script>
+      const sketches = ["page1/index.html"];
+      const iframe = document.getElementById("sketch-iframe");
+      document.addEventListener("DOMContentLoaded", () => {
+        iframe.src = sketches[0];
+      });
+    </script>
+  </body>
+</html>
