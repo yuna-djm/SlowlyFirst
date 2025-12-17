@@ -700,7 +700,7 @@ class IntertitleChar {
     push();
     textAlign(LEFT, CENTER);
 
-    if (sceneIdx === 0) {
+    if (mode === "write") {
       let activeVal = this.clarity;
       let currentSize = map(activeVal, 0, 1, 5, this.baseSize);
       let alpha = map(activeVal, 0, 1, 20, 255);
