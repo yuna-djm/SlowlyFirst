@@ -599,7 +599,7 @@ function checkNextSceneCondition() {
     } else {
       let elapsedTime = millis() - completionStartTime;
 
-      if (elapsedTime > 2000) {
+      if (elapsedTime > 4000) {
         goToNextScene();
       }
     }
